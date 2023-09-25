@@ -341,9 +341,24 @@ Input (Y/N): '''.format
                         listBooks[idxRead]["Author"]))
                     
                     title       = str(input("\nInput 'Title' of the Book: ")).title()
+
+                    if title == "":
+                        title   = listBooks[idxRead]["Title"]
+
                     genre       = str(input("Input 'Genre' of the Book: ")).capitalize()
+
+                    if genre == "":
+                        genre   = listBooks[idxRead]["Genre"]
+
                     years       = str(input("Input 'Years' of the Book: "))
+
+                    if years == "":
+                        years   = listBooks[idxRead]["Years"]
+
                     author      = str(input("Input 'Author' of the Book: ")).title()
+                    
+                    if author == "":
+                        author  = listBooks[idxRead]["Author"]
 
                     updatedBooks  = {
                         "Code"      : code,
