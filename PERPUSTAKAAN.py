@@ -88,7 +88,7 @@ LIST MENU \n
         
         else:
 
-            print("\nYou input the wrong number. Input again")
+            print("\nYou input the wrong number. Input again!")
                 
 
 ##########  READ  ################
@@ -220,13 +220,14 @@ Do you REALLY want to create this data?
     YEARS   : {}
     AUTHOR  : {}
                                                                                                 
-Input (Y/N): 
-            '''.format(savedBooks["Code"],savedBooks["Title"],savedBooks["Genre"],
+Input (Y/N):  '''.format(savedBooks["Code"],savedBooks["Title"],savedBooks["Genre"],
                        savedBooks["Years"],savedBooks["Author"]))).capitalize()
 
                         if lastYesNo    == "Y":
 
                             listBooks.append(savedBooks)
+
+                            print("\nBood data CREATED")
 
                         else:
 
@@ -257,7 +258,7 @@ Input (Y/N):
         
         else:
 
-            print("\nYou input the wrong number. Input again")
+            print("\nYou input the wrong number. Input again!")
 
 
 ##########  CHANGE  #################
@@ -376,8 +377,7 @@ Do you REALLY want to change this data?
     YEARS   : {}
     AUTHOR  : {}
                                             
-Input (Y/N): 
-            '''.format(updatedBooks["Code"],updatedBooks["Title"],updatedBooks["Genre"],
+Input (Y/N): '''.format(updatedBooks["Code"],updatedBooks["Title"],updatedBooks["Genre"],
                          updatedBooks["Years"],updatedBooks["Author"]))).capitalize()
 
 
@@ -391,6 +391,7 @@ Input (Y/N):
                                 idxRead         = listBooks.index(read)
                                 listBooks[idxRead].update(updatedBooks)
                                 
+                                print("\nBook data CHANGED")
                         break
 
                     else:
@@ -417,7 +418,7 @@ Input (Y/N):
         
         else:
 
-            print("\nYou input the wrong number. Input again")
+            print("\nYou input the wrong number. Input again!")
     
 #############  DELETE  ##############
 
@@ -433,7 +434,7 @@ Delete MENU \n
 3. Back to main menu
 
 0. EXIT
-            ''')
+              ''')
 
         inputNums = (input("Input following nums from [0-3]: "))
 
@@ -505,6 +506,8 @@ Input (Y/N): '''.format
 
                                 del listBooks[idxRead]
 
+                                print("\nBook data DELETED")
+
                         break
 
                     else:
@@ -531,7 +534,7 @@ Input (Y/N): '''.format
         
         else:
 
-            print("\nYou input the wrong number. Input again")
+            print("\nYou input the wrong number. Input again!")
 
 def mainMenu():
     while True:
@@ -573,7 +576,7 @@ MAIN MENU \n
 
         else:
 
-            print("\nYou input the wrong number. Input again")
+            print("\nYou input the wrong number. Input again!")
 
 mainMenu()
 
